@@ -22,10 +22,9 @@ export const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen font-sans bg-white flex flex-col relative text-gray-900 overflow-x-hidden">
       
-      {/* Soft Blue Gradient Background at Top */}
+
       <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#e8f0fe] via-[#f0f4fd] to-white pointer-events-none z-0"></div>
 
-      {/* Light Floating Navbar */}
       <header className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out ${isScrolled ? 'top-4 w-[calc(100%-4rem)] max-w-5xl' : 'top-6 w-[calc(100%-3rem)] max-w-7xl'}`}>
         <nav className={`w-full bg-white/80 backdrop-blur-lg border border-gray-200/60 flex items-center justify-between shadow-sm transition-all duration-500 ease-out ${isScrolled ? 'px-6 py-2 rounded-full' : 'px-8 py-4 rounded-2xl'}`}>
           <div className="flex items-center gap-2">
@@ -61,7 +60,6 @@ export const LandingPage: React.FC = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
           <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 p-4 flex flex-col gap-4 md:hidden animate-fade-in z-50">
             <a href="#features" onClick={(e) => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); setIsMobileMenuOpen(false); }} className="text-gray-600 font-medium p-2 hover:bg-gray-50 rounded-lg">Features</a>
@@ -78,13 +76,12 @@ export const LandingPage: React.FC = () => {
         )}
       </header>
 
-      {/* Hero Section */}
       <main className="flex-1 flex flex-col items-center text-center px-4 pt-40 pb-16 relative z-10 w-full max-w-7xl mx-auto min-h-[80vh]">
         
-        {/* Floating Cards with Parallax Effect */}
+
         <div className="absolute inset-0 pointer-events-none w-full h-full z-0">
            
-           {/* Card 1 - Top Left */}
+
            <div 
              className="absolute left-4 lg:left-10 top-32 hidden md:flex flex-col gap-2 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-gray-100 animate-float-fast"
              style={{ transform: `translateY(${scrollY * 0.35}px) rotate(-6deg)` }}
@@ -94,7 +91,6 @@ export const LandingPage: React.FC = () => {
               <div className="w-24 h-1.5 bg-gray-100 rounded-full mt-1"><div className="w-3/4 h-full bg-blue-500 rounded-full"></div></div>
            </div>
 
-           {/* Card 2 - Top Right */}
            <div 
              className="absolute right-4 lg:right-10 top-48 hidden md:flex flex-col gap-2 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-gray-100 animate-float"
              style={{ transform: `translateY(${scrollY * 0.25}px) rotate(6deg)` }}
@@ -106,7 +102,6 @@ export const LandingPage: React.FC = () => {
               </div>
            </div>
 
-           {/* Card 3 - Bottom Left */}
            <div 
              className="absolute left-16 lg:left-32 top-96 hidden lg:flex flex-col gap-2 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-gray-100 animate-float-delayed mt-10"
              style={{ transform: `translateY(${scrollY * 0.4}px) rotate(3deg)` }}
@@ -115,7 +110,6 @@ export const LandingPage: React.FC = () => {
               <div className="text-xl font-bold text-gray-900">1,240+</div>
            </div>
 
-           {/* Card 4 - Bottom Right */}
            <div 
              className="absolute right-16 lg:right-32 top-[22rem] hidden lg:flex flex-col gap-2 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl border border-gray-100 animate-float-fast"
              style={{ transform: `translateY(${scrollY * 0.15}px) rotate(-3deg)` }}
@@ -131,7 +125,6 @@ export const LandingPage: React.FC = () => {
            </div>
         </div>
 
-        {/* Hero Content */}
         <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center mt-10 select-none">
           <h1 className="text-5xl md:text-[5rem] font-bold tracking-tight leading-[1.05] mb-6 text-[#0f172a] drop-shadow-sm cursor-default">
             Manage Your Sales <br className="hidden md:block" /> Pipeline With <span className="text-blue-600 inline-flex items-center gap-3 whitespace-nowrap">
@@ -155,7 +148,7 @@ export const LandingPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Trusted By Section */}
+
         <div className="w-full mt-32 mb-10 relative z-10">
           <p className="text-xs font-semibold text-gray-400 mb-8 uppercase tracking-widest">Trusted by High-Performance Sales Teams</p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-80">
@@ -169,7 +162,6 @@ export const LandingPage: React.FC = () => {
 
       </main>
 
-      {/* Features Section */}
       <section id="features" className="w-full bg-slate-50 relative z-10 py-24 px-6 border-y border-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           
@@ -187,7 +179,7 @@ export const LandingPage: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            {/* Card 1: Intelligent Lead Tracking */}
+
             <div className="bg-white border border-gray-200 rounded-2xl p-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-full h-56 bg-gradient-to-br from-blue-100 via-blue-50 to-white rounded-xl mb-6 relative overflow-hidden flex flex-col justify-center items-center p-6 gap-3">
                  <div className="w-full max-w-[200px] bg-white/80 backdrop-blur border border-white rounded-lg p-3 flex items-center justify-between shadow-sm">
@@ -220,16 +212,15 @@ export const LandingPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Card 2: Actionable Analytics */}
             <div id="analytics" className="bg-white border border-gray-200 rounded-2xl p-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-full h-56 bg-gradient-to-br from-blue-100 via-blue-50 to-white rounded-xl mb-6 relative overflow-hidden p-6 flex items-center justify-center">
-                 {/* Fake Pie Chart */}
+
                  <div className="w-28 h-28 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.3)] border-[3px] border-white relative" style={{ background: 'conic-gradient(#3b82f6 0% 55%, #60a5fa 55% 85%, #bfdbfe 85% 100%)' }}>
-                    {/* Donut hole */}
+
                     <div className="absolute inset-0 m-auto w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-inner">
                        <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                     </div>
-                    {/* Floating labels */}
+
                     <div className="absolute top-0 -right-6 bg-white px-2 py-0.5 rounded shadow-sm text-[9px] font-bold text-gray-700 border border-gray-100">55% New</div>
                     <div className="absolute bottom-0 -left-6 bg-white px-2 py-0.5 rounded shadow-sm text-[9px] font-bold text-gray-700 border border-gray-100">30% Won</div>
                  </div>
@@ -242,7 +233,6 @@ export const LandingPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Card 3: Role-Based Access */}
             <div className="bg-white border border-gray-200 rounded-2xl p-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-full h-56 bg-gradient-to-br from-blue-100 via-blue-50 to-white rounded-xl mb-6 relative overflow-hidden flex flex-col items-center justify-center gap-4">
                  
@@ -276,7 +266,6 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pre-Footer CTA */}
       <section className="w-full bg-white py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10 bg-gray-50 rounded-3xl p-12 border border-gray-100 shadow-sm">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to scale your sales?</h2>
@@ -290,7 +279,6 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="w-full bg-gray-900 pt-16 pb-8 px-6 mt-auto relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">

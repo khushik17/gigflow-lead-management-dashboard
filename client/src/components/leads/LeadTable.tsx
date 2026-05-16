@@ -29,7 +29,7 @@ export const LeadTable: React.FC<LeadTableProps> = ({ leads, onView, onEdit, onD
         <tbody className="divide-y divide-gray-50 dark:divide-dark-border/50">
           {leads.map((lead) => (
             <tr key={lead._id} className="hover:bg-primary-50/50 dark:hover:bg-dark-border/40 even:bg-gray-50/30 dark:even:bg-dark-bg/20 transition-colors group cursor-pointer" onClick={(e) => {
-              // Don't trigger row click if a button was clicked
+
               if ((e.target as HTMLElement).closest('button')) return;
               onView(lead);
             }}>

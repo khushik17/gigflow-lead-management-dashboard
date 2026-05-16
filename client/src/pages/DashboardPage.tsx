@@ -25,7 +25,7 @@ export const DashboardPage: React.FC = () => {
   const [filters, setFilters] = useState({});
   const { user } = useAuth();
   
-  // Modal states
+
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
   const [isViewModalOpen, setIsViewModalOpen] = useState(false);
   const [selectedLead, setSelectedLead] = useState<ILead | null>(null);
@@ -90,7 +90,7 @@ export const DashboardPage: React.FC = () => {
         responseType: 'blob',
       });
       
-      // Create a blob link to download
+
       const url = window.URL.createObjectURL(new Blob([res.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -172,7 +172,6 @@ export const DashboardPage: React.FC = () => {
         )}
       </div>
 
-      {/* View Lead Modal */}
       <Modal 
         isOpen={isViewModalOpen} 
         onClose={() => setIsViewModalOpen(false)}
@@ -181,7 +180,6 @@ export const DashboardPage: React.FC = () => {
         {selectedLead && <LeadDetails lead={selectedLead} />}
       </Modal>
 
-      {/* Create/Edit Lead Modal */}
       <Modal 
         isOpen={isFormModalOpen} 
         onClose={() => setIsFormModalOpen(false)}

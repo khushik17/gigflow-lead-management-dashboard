@@ -22,7 +22,7 @@ export const LeadDetails: React.FC<LeadDetailsProps> = ({ lead }) => {
   return (
     <div className="space-y-6 text-gray-800 dark:text-gray-200">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* Contact Info */}
+
         <div className="space-y-1">
           <p className="text-sm text-gray-500 dark:text-gray-400">Full Name</p>
           <p className="font-medium text-lg">{lead.name}</p>
@@ -36,7 +36,6 @@ export const LeadDetails: React.FC<LeadDetailsProps> = ({ lead }) => {
           </p>
         </div>
 
-        {/* Status & Source */}
         <div className="space-y-1">
           <p className="text-sm text-gray-500 dark:text-gray-400">Current Status</p>
           <div className="mt-1">
@@ -50,14 +49,12 @@ export const LeadDetails: React.FC<LeadDetailsProps> = ({ lead }) => {
           </p>
         </div>
 
-        {/* Creator Info */}
         <div className="space-y-1">
           <p className="text-sm text-gray-500 dark:text-gray-400">Created By</p>
           <p className="font-medium">{creator.name}</p>
           {creator.email && <p className="text-xs text-gray-500 dark:text-gray-400">{creator.email}</p>}
         </div>
 
-        {/* Timestamps */}
         <div className="space-y-1">
           <p className="text-sm text-gray-500 dark:text-gray-400">Created At</p>
           <p className="font-medium text-sm">{formatDate(lead.createdAt)}</p>

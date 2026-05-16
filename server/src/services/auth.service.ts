@@ -58,7 +58,7 @@ export const loginUser = async (data: LoginDTO) => {
 
   const token = generateToken(user._id as unknown as string);
   
-  // Remove password from response
+
   const userObj = user.toObject();
   delete userObj.password;
 

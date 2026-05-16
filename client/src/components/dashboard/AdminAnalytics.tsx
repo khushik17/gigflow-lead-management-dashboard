@@ -105,7 +105,6 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
     },
   ];
 
-  // Pre-calculate percentages for chart legends
   const totalStatus = data.byStatus.reduce((acc, curr) => acc + curr.value, 0);
   const statusChartData = data.byStatus.map(d => ({
     ...d,
@@ -125,7 +124,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
         <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">Admin Insights</h2>
       </div>
       
-      {/* Linear-Style KPI Cards */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map((card, index) => (
           <div 
@@ -154,7 +153,6 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
         ))}
       </div>
 
-      {/* Tiny Dashboard Analytics Charts */}
       {((data.bySource?.length || 0) > 0 || (data.byStatus?.length || 0) > 0) && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           

@@ -10,8 +10,6 @@ import { LandingPage } from './pages/LandingPage';
 import { ProtectedRoute } from './components/layout/ProtectedRoute';
 import { Layout } from './components/layout/Layout';
 
-// Triggering Tailwind JIT recompile
-
 const App: React.FC = () => {
   return (
     <ThemeProvider>

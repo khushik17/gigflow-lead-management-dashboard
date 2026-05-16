@@ -17,7 +17,7 @@ export const LoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 bg-gradient-to-br from-blue-50 via-purple-50/50 to-rose-50/30 flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Decorative Orbs */}
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-blue-200/40 rounded-full blur-3xl mix-blend-multiply"></div>
         <div className="absolute bottom-40 right-1/4 w-[600px] h-[600px] bg-purple-200/40 rounded-full blur-3xl mix-blend-multiply"></div>

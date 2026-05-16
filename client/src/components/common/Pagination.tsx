@@ -9,7 +9,7 @@ interface PaginationProps {
 }
 
 export const Pagination: React.FC<PaginationProps> = ({ page, totalPages, onPageChange }) => {
-  // Always show pagination container for visual consistency, even on page 1
+
   return (
     <div className="flex items-center justify-between px-4 py-3 border-t border-gray-200 dark:border-dark-border sm:px-6">
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
