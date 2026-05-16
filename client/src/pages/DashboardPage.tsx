@@ -7,7 +7,6 @@ import { Button } from '../components/common/Button';
 import { LeadFilters } from '../components/leads/LeadFilters';
 import { LeadTable } from '../components/leads/LeadTable';
 import { Pagination } from '../components/common/Pagination';
-import { Spinner } from '../components/common/Spinner';
 import { TableSkeleton } from '../components/common/TableSkeleton';
 import { Modal } from '../components/common/Modal';
 import { EmptyState } from '../components/common/EmptyState';

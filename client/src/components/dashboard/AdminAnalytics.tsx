@@ -170,7 +170,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
                     paddingAngle={5}
                     dataKey="value"
                   >
-                    {statusChartData.map((entry, index) => (
+                    {statusChartData.map((_, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
@@ -197,7 +197,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
                     paddingAngle={5}
                     dataKey="value"
                   >
-                    {sourceChartData.map((entry, index) => (
+                    {sourceChartData.map((_, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[(index + 3) % COLORS.length]} />
                     ))}
                   </Pie>
