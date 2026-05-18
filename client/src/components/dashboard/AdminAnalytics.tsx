@@ -159,7 +159,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
           <div className="bg-white dark:bg-dark-surface rounded-2xl p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-200/60 dark:border-dark-border/50">
             <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Leads by Status</h3>
             <div className="w-full h-[300px] min-w-0">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="99%" height={300}>
                 <PieChart>
                   <Pie
                     data={statusChartData}
@@ -186,7 +186,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
           <div className="bg-white dark:bg-dark-surface rounded-2xl p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-200/60 dark:border-dark-border/50">
             <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Leads by Source</h3>
             <div className="w-full h-[300px] min-w-0">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="99%" height={300}>
                 <PieChart>
                   <Pie
                     data={sourceChartData}
