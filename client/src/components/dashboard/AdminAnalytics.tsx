@@ -123,12 +123,12 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
         <Sparkles className="text-primary-600 dark:text-primary-400" size={18} />
         <h2 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wider">Admin Insights</h2>
       </div>
-      
+
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map((card, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`${card.cardBg} rounded-2xl p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-200/60 dark:border-dark-border/50 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 group cursor-default`}
           >
             <div className="flex justify-between items-start mb-4">
@@ -137,7 +137,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
                 <card.icon size={16} className={card.iconColor} />
               </div>
             </div>
-            
+
             <div className="mt-2">
               <h3 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{card.value}</h3>
               <div className="flex items-center mt-3 gap-1.5">
@@ -155,10 +155,10 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
 
       {((data.bySource?.length || 0) > 0 || (data.byStatus?.length || 0) > 0) && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          
+
           <div className="bg-white dark:bg-dark-surface rounded-2xl p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-200/60 dark:border-dark-border/50">
             <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Leads by Status</h3>
-            <div className="flex justify-center items-center h-[200px] w-full">
+            <div className="w-full h-[300px] min-w-0">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -174,8 +174,8 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <RechartsTooltip 
-                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 14px rgb(0,0,0,0.1)' }} 
+                  <RechartsTooltip
+                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 14px rgb(0,0,0,0.1)' }}
                   />
                   <Legend verticalAlign="bottom" height={40} iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: '500', color: '#64748b' }} />
                 </PieChart>
@@ -185,7 +185,7 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
 
           <div className="bg-white dark:bg-dark-surface rounded-2xl p-5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-gray-200/60 dark:border-dark-border/50">
             <h3 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Leads by Source</h3>
-            <div className="flex justify-center items-center h-[200px] w-full">
+            <div className="w-full h-[300px] min-w-0">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -201,8 +201,8 @@ export const AdminAnalytics: React.FC<AdminAnalyticsProps> = ({ refreshTrigger =
                       <Cell key={`cell-${index}`} fill={COLORS[(index + 3) % COLORS.length]} />
                     ))}
                   </Pie>
-                  <RechartsTooltip 
-                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 14px rgb(0,0,0,0.1)' }} 
+                  <RechartsTooltip
+                    contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 14px rgb(0,0,0,0.1)' }}
                   />
                   <Legend verticalAlign="bottom" height={40} iconType="circle" wrapperStyle={{ fontSize: '11px', fontWeight: '500', color: '#64748b' }} />
                 </PieChart>
