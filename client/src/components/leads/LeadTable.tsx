@@ -50,21 +50,23 @@ export const LeadTable: React.FC<LeadTableProps> = ({ leads, onView, onEdit, onD
                 <StatusBadge status={lead.status} />
               </td>
               <td className="px-6 py-4 hidden lg:table-cell text-sm text-gray-600 dark:text-gray-300">
-                {typeof lead.createdBy === 'object' ? lead.createdBy.name : 'Unknown'}
+                {typeof lead.createdBy === 'object' && lead.createdBy !== null
+                  ? lead.createdBy.name
+                  : 'Unknown'}
               </td>
               <td className="px-6 py-4 hidden sm:table-cell text-sm text-gray-500 dark:text-gray-400">
                 {new Date(lead.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
               </td>
               <td className="px-6 py-4 text-right">
                 <div className="flex justify-end gap-2">
-                  <button 
+                  <button
                     onClick={() => onView(lead)}
                     className="p-1.5 text-gray-500 hover:text-primary-600 bg-gray-50 hover:bg-primary-50 rounded-md transition-colors dark:bg-gray-800 dark:hover:bg-primary-900/30 dark:text-gray-400 dark:hover:text-primary-400"
                     title="View details"
                   >
                     <Eye size={16} />
                   </button>
-                  <button 
+                  <button
                     onClick={() => onEdit(lead)}
                     className="p-1.5 text-gray-500 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 rounded-md transition-colors dark:bg-gray-800 dark:hover:bg-blue-900/30 dark:text-gray-400 dark:hover:text-blue-400"
                     title="Edit lead"
@@ -72,7 +74,7 @@ export const LeadTable: React.FC<LeadTableProps> = ({ leads, onView, onEdit, onD
                     <Edit2 size={16} />
                   </button>
                   <RoleGate roles={[UserRole.Admin]}>
-                    <button 
+                    <button
                       onClick={() => onDelete(lead._id)}
                       className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-md transition-colors"
                       title="Delete Lead"
